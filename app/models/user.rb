@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   validates :name, length: { minimum: 3, message: "Your name is too short!" }
 
-  validates :role,
+  validates :id, uniqueness: true
 
-  validates :pubkey, length: {  }
+  validates_inclusion_of :role, :in => ["Client", "Solicitor"]
 end

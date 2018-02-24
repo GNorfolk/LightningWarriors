@@ -18,12 +18,7 @@
 
   <div class="field">
     <%= form.label :role %>
-    <%= form.text_field :role, id: :user_role %>
-  </div>
-
-  <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id, id: :user_id %>
+    <%= form.select :role, ['Client', 'Solicitor']%>
   </div>
 
   <div class="field">
