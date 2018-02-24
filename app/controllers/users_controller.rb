@@ -14,7 +14,9 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    keys = PenguinNet.generateKeys
     @user = User.new
+    @user.set_pubkey(keys[:publicKey])
   end
 
   # GET /users/1/edit
